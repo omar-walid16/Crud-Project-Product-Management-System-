@@ -23,12 +23,20 @@ function addProduct() {
     clearForm();
 
     }
-    
-    // else
-    // {
-    //     alert('ProductName Invalid')
-    // }
-    
+    if (validateProductPrice()  ==true)
+    {
+    var product = {
+    name : productNameInput.value,
+    price : productPriceInput.value,
+    category : productCategoryInput.value,
+    desc : productDescInput.value,
+    }
+    productsContainer.push(product);
+    localStorage.setItem('myProducts',JSON.stringify(productsContainer));
+    displayproducts(productsContainer);
+    clearForm();
+
+    }
 
 }
 
@@ -144,12 +152,3 @@ function validateProductPrice() {
         return false ;
     }
 }
-
-
-// var regex = /^[A-Z]/ ; 
-// var productName = "Samsung";
-// console.log(regex.test(productName))
-
-// var x ="web design development".replace(/\s/g,"")
-// console.log(x)
-
