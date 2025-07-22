@@ -115,6 +115,9 @@ function updateInputInfo() {
     localStorage.setItem('myProducts',JSON.stringify(productsContainer));
     displayproducts(productsContainer);
     clearForm();
+        document.getElementById("addBtn").style.display = "inline";
+    document.getElementById("updateBtn").style.display = "none";
+    
 }
 
 function deleteProduct(index) {
