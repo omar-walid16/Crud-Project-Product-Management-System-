@@ -21,6 +21,7 @@ function addProduct() {
     localStorage.setItem('myProducts',JSON.stringify(productsContainer));
     displayproducts(productsContainer);
     clearForm();
+    productNameInput.classlist.remove("is-valid")
 
     }
     if (validateProductPrice()  ==true)
@@ -35,6 +36,8 @@ function addProduct() {
     localStorage.setItem('myProducts',JSON.stringify(productsContainer));
     displayproducts(productsContainer);
     clearForm();
+    productPriceInput.classlist.remove("is-invalid")
+        
 
     }
     
@@ -158,12 +161,3 @@ function validateProductPrice() {
         return false ;
     }
 }
-
-
-// var regex = /^[A-Z]/ ; 
-// var productName = "Samsung";
-// console.log(regex.test(productName))
-
-// var x ="web design development".replace(/\s/g,"")
-// console.log(x)
-
