@@ -21,7 +21,7 @@ function addProduct() {
     localStorage.setItem('myProducts',JSON.stringify(productsContainer));
     displayproducts(productsContainer);
     clearForm();
-    productNameInput.classlist.remove("is-valid")
+    productNameInput.classlist.remove("is-valid , is-invalid")
 
     }
     if (validateProductPrice()  ==true)
@@ -36,7 +36,7 @@ function addProduct() {
     localStorage.setItem('myProducts',JSON.stringify(productsContainer));
     displayproducts(productsContainer);
     clearForm();
-    productPriceInput.classlist.remove("is-invalid")
+    productPriceInput.classlist.remove("is-invalid , is-valid")
         
 
     }
