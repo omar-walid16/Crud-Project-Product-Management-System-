@@ -94,8 +94,10 @@ function updateInputInfo() {
     clearFormregex();
     document.getElementById("addBtn").style.display = "inline";
     document.getElementById("updateBtn").style.display = "none";
-    addProduct()
-    
+    addProduct();
+    productNameInput.classList.remove('is-invalid');
+    productPriceInput.classList.remove('is-invalid');
+
 }
 
 function deleteProduct(index) {
@@ -159,4 +161,5 @@ function validateProductPrice() {
 
 // var x ="web design development".replace(/\s/g,"")
 // console.log(x)
+
 
